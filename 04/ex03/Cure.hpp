@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 15:29:11 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/13 17:00:42 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/17 16:07:33 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/17 16:50:18 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
-# include <iostream>
+# include "AMateria.hpp"
 
-class WrongAnimal
+class Cure : public AMateria
 {
-	protected:
-		std::string	type;
 	public:
-		WrongAnimal();
-		WrongAnimal(WrongAnimal const & src);
-		virtual ~WrongAnimal();
-		WrongAnimal &	operator=(WrongAnimal const & rhs);
-		const std::string	&getType(void)const;
-		virtual void		makeSound(void)const;
+		Cure( void );
+		Cure( const Cure &src );
+		~Cure( void );
+		Cure		&operator=( const Cure &other );
+		virtual AMateria	*clone( void ) const ;
+		virtual void		use(ICharacter& target);
 };
-
-std::ostream	&operator<<(std::ostream &ostream, const WrongAnimal &instance);
 
 #endif

@@ -7,13 +7,7 @@ RED		= \033[0;31m
 YELLOW	= \033[0;33m
 RESET	= \033[0m
 
-FUNC	= main			\
-		  Animal		\
-		  Dog			\
-		  Cat			\
-		  WrongAnimal	\
-		  WrongCat		\
-		  Brain
+FUNC	= main
 
 SRC		= $(addsuffix .cpp, $(FUNC))
 OBJ		= $(addsuffix .o, $(FUNC))
