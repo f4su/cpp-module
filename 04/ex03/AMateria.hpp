@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 16:20:58 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 17:17:59 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/23 20:43:27 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/23 20:43:29 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,23 @@
 
 # include <iostream>
 # include "ICharacter.hpp"
+
 # define BOLD  "\001\033[1m\002"
 # define CLOSE "\001\033[0m\002"
 
-class	AMateria : public ICharacter
+class ICharacter;
+
+class AMateria
 {
 	protected:
 		std::string	type;
 	public:
-		AMateria(std::string const & type);
+		AMateria( const std::string &type );
 		virtual	~AMateria(){}
-		std::string const & getType() const; //Returns the materia type
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		std::string const	&getType(void)const;
+		virtual AMateria	*clone(void)const = 0;
+		virtual void		use(ICharacter& target) = 0;
+
 };
 
 #endif

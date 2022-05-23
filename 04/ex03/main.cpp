@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
+/*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 16:04:16 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 17:19:35 by jgainza-         ###   ########.fr       */
+/*   Created: 2021/10/12 12:58:57 by pohl              #+#    #+#             */
+/*   Updated: 2022/05/23 20:54:11 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ int	main(void)
 	src->learnMateria(new Cure());
 
 	ICharacter* me = new Character("me");
-	AMateria* tmp;
+	AMateria* tmp1;
+	AMateria* tmp2;
 
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
+	tmp1 = src->createMateria("ice");
+	me->equip(tmp1);
 
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	tmp2 = src->createMateria("cure");
+	me->equip(tmp2);
 
 	ICharacter* bob = new Character("bob");
 
@@ -38,5 +39,7 @@ int	main(void)
 	delete (bob);
 	delete (me);
 	delete (src);
+	delete (tmp1);
+	delete (tmp2);
 	return (0);
 }

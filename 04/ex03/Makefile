@@ -1,16 +1,22 @@
 NAME	= Animals
 CC		= clang++
 RM		= rm -f
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -ggdb3
 GREEN	= \033[0;32m
 RED		= \033[0;31m
 YELLOW	= \033[0;33m
 RESET	= \033[0m
 
-FUNC	= main
+FUNC	= main				\
+		  AMateria			\
+		  Character			\
+		  Cure				\
+		  Ice				\
+		  MateriaSource
 
 SRC		= $(addsuffix .cpp, $(FUNC))
 OBJ		= $(addsuffix .o, $(FUNC))
+
 
 all		: $(NAME)
 

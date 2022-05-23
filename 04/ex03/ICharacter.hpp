@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 16:20:51 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 16:43:38 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/23 20:43:55 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/23 20:43:56 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <iostream>
 # include "AMateria.hpp"
 
-class	ICharacter : public AMateria
+class	AMateria;
+
+class	ICharacter
 {
 	public:
 		virtual ~ICharacter() {}

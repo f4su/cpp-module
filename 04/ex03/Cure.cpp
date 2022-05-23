@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 17:01:57 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 17:07:46 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/23 20:43:40 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/23 20:43:41 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure")
+Cure::Cure() : AMateria("cure")
 {
 	std::cout << "Cure Default constructor called\n";
 }
 
-Cure::Cure(Cure const & src)
+Cure::Cure(Cure const & src) : AMateria("cure")
 {
 	std::cout << "Cure Copy constructor called\n";
 	*this = src;
@@ -30,7 +30,7 @@ Cure::~Cure()
 
 Cure &	Cure::operator=(Cure const & rhs)
 {
-	this->type = rhs.type();
+	this->type = rhs.type;
 	return (*this);
 }
 

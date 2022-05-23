@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 16:07:28 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 17:07:54 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/23 20:44:07 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/23 20:44:11 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 
 class Ice : public AMateria
 {
+	private:
 	public:
-		Ice( void );
-		Ice( const Ice &src );
-		~Ice( void );
-		Ice		&operator=( const Ice &other );
-		virtual AMateria	*clone( void ) const ;
+		Ice();
+		Ice(const Ice &src);
+		~Ice();
+		Ice		&operator=(const Ice &rhs);
+		virtual AMateria	*clone(void)const;
 		virtual void		use(ICharacter& target);
 };
 

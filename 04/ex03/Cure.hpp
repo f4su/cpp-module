@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgainza- <jgainza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 16:07:33 by jgainza-          #+#    #+#             */
-/*   Updated: 2022/05/17 16:50:18 by jgainza-         ###   ########.fr       */
+/*   Created: 2022/05/23 20:43:51 by jgainza-          #+#    #+#             */
+/*   Updated: 2022/05/23 20:43:52 by jgainza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 
 class Cure : public AMateria
 {
+	private:
 	public:
-		Cure( void );
-		Cure( const Cure &src );
-		~Cure( void );
-		Cure		&operator=( const Cure &other );
-		virtual AMateria	*clone( void ) const ;
+		Cure();
+		Cure(const Cure &src);
+		~Cure();
+		Cure				&operator=(const Cure &rhs);
+		virtual AMateria	*clone(void)const;
 		virtual void		use(ICharacter& target);
 };
 
